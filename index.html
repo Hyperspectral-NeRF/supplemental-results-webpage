@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="Hyperspectral NeRF" />
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG" />
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG" />
+  <meta property="og:url" content="URL OF THE WEBSITE" />
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG" />
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG" />
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Hyperspectral Neural Radiance Fields</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico" />
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet" />
+
+  <link rel="stylesheet" href="static/css/bulma.min.css" />
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css" />
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css" />
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" />
+  <link rel="stylesheet" href="static/css/index.css" />
+  <link rel="stylesheet" href="static/css/hs-nerf.css" />
+  <link rel="stylesheet" href="static/css/bulma-collapsible.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+
+<body>
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">
+              Hyperspectral Neural Radiance Fields, Supplementary Videos/Images
+            </h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                Anonymous ECCV 2024 Submission<br />Paper ID #5419,
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <!-- Institution <br />-->
+              ECCV 2024
+              </span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- Arxiv PDF link -->
+                <!-- <span class="link-block">
+                  <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span> -->
+
+                <!-- Supplementary PDF link -->
+                <span class="link-block">
+                  <a href="./supplemental.pdf" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Supplementary</span>
+                  </a>
+                </span>
+
+                <!-- Github link -->
+                <!-- <span class="link-block">
+                  <a href="https://github.com/" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span> -->
+
+                <!-- ArXiv abstract Link -->
+                <!-- <span class="link-block">
+                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Teaser video-->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <div class="" style="width:75%; margin:auto;">
+          <video poster="" id="tree" autoplay muted loop>
+            <source src="https://hyperspectral-nerf.github.io/supplemental-results-data/headline/hs-moving-camera.mp4" type="video/mp4">
+          </video>
+        </div>
+        <br />
+        <!-- <div poster="" id="tree" class="columns"> -->
+          <!-- <div class="column">
+            <video autoplay muted loop height="100%">
+              <source src="https://hyperspectral-nerf.github.io/supplemental-results-data/rgb/FAKEPLANT1/labeled_black_rgb-montage_quarter.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="column">
+            <video autoplay muted loop height="100%">
+              <source src="https://hyperspectral-nerf.github.io/supplemental-results-data/rgb/FAKEPLANT2/labeled_black_rgb-montage_quarter.mp4" type="video/mp4">
+            </video>
+          </div> -->
+          <!-- <div class="column">
+            <video autoplay muted loop height="100%">
+              <source src="https://hyperspectral-nerf.github.io/supplemental-results-data/rgb/PINECONE/labeled_black_rgb-montage_quarter.mp4" type="video/mp4">
+            </video>
+          </div> -->
+          <!-- Math
+            676x200
+            416x200
+            450x200
+          
+          -->
+          <!-- <div class="column">
+            <video autoplay muted loop height="100%">
+              <source src="https://hyperspectral-nerf.github.io/supplemental-results-data/headline/labeled_ICCV-4a-128_quarter.mp4" type="video/mp4">
+            </video>
+          </div> -->
+          <!-- <div class="column is-three-fifths is-centered">
+            <video autoplay muted loop height="100%">
+              <source src="https://hyperspectral-nerf.github.io/supplemental-results-data/headline/hs-moving-camera_scaled.mp4" type="video/mp4">
+            </video>
+          </div> -->
+          <!-- <div class="column">
+            <video autoplay muted loop height="100%">
+              <source src="https://hyperspectral-nerf.github.io/supplemental-results-data/headline/rgb_FAKEPLANT2.mp4" type="video/mp4">
+            </video>
+          </div> -->
+          <!-- <div class="column">
+            <video autoplay muted loop height="100%">
+              <source src="https://hyperspectral-nerf.github.io/supplemental-results-data/headline/combined.mp4" type="video/mp4">
+            </video>
+          </div> -->
+        <!-- </div> -->
+        <h2 class="subtitle has-text-centered">
+          HS-NeRF extends NeRF to hyperspectral data to address the 3D reconstruction challenges inherent to hyperspectral data.  We demonstrate applications such as hyperspectral super-resolution and camera sensor simulation, with potential future applications in non-destructively estimating 3D distributions of material compositions for agriculture, mining, medicine, and more.
+        </h2>
+      </div>
+    </div>
+  </section>
+  <!-- End teaser video -->
+
+  <!-- Paper abstract -->
+  <section class="section hero is-light" style="display: none;">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Hyperspectral Imagery (HSI) has been used in many applications to non-destructively determine the material and/or chemical compositions of samples.
+              There is growing interest in creating 3D hyperspectral reconstructions, which could provide both spatial and spectral information while also mitigating common HSI challenges such as non-Lambertian surfaces and translucent objects.
+              However, traditional 3D reconstruction with HSI is difficult due to technological limitations of hyperspectral cameras.
+              In recent years, Neural Radiance Fields (NeRFs) have seen widespread success in creating high quality volumetric 3D representations of scenes captured by a variety of camera models.
+              Leveraging recent advances in NeRFs, we propose computing a hyperspectral 3D reconstruction in which every point in space and view direction is characterized by wavelength-dependent radiance and transmittance spectra.
+              To evaluate our approach, a dataset containing nearly 2000 hyperspectral images across 8 scenes and 2 cameras was collected.  We perform comparisons against traditional RGB NeRF baselines and apply ablation testing with alternative spectra representations. 
+              Finally, we demonstrate the potential of hyperspectral NeRFs for hyperspectral super-resolution and imaging sensor simulation.
+              We show that our hyperspectral NeRF approach enables creating fast, accurate volumetric 3D hyperspectral scenes and enables several new applications and areas for future study. 
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+
+  <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container is-centered">
+        <h1 class="title is-3 is-centered has-text-centered" style="margin:auto;">Tip: These are collapsible sections.<br />Please click on the headings to expand/collapse.</h1>
+      </div>
+    </div>
+  </section>
+  <!-- Sample Section -->
+  <!-- <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container box">
+        <a href="#Sample-Section" data-action="collapse">
+          <h2 class="title is-3">Sample Section</h2>
+          <p>Punchline</p>
+        </a>
+
+        <div class="is-centered has-text-centered is-collapsible" id="Sample-Section">
+          Content
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <!-- End Sample Section -->
+
+  <!-- Raw Images -->
+  <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container box">
+        <!-- raw-images -->
+        <a href="#raw-images" data-action="collapse">
+          <h2 class="title is-3">Raw Dataset Images</h2>
+          <p>Here are some examples of raw images taken by the hyperspectral cameras.</p>
+        </a>
+
+        <div class="is-centered has-text-centered is-collapsible" id="raw-images">
+          <h1 class="title is-3">BaySpec Camera Datasets</h1>
+          <h1 class="title is-4">Anacampseros</h1>
+          <img src="https://hyperspectral-nerf.github.io/supplemental-results-data/raw-images/hs_FAKEPLANT1_2.png" />
+          <br />
+          <br />
+          <h1 class="title is-4">Caladium</h1>
+          <img src="https://hyperspectral-nerf.github.io/supplemental-results-data/raw-images/hs_FAKEPLANT2_1.png" />
+          <br />
+          <br />
+          <h1 class="title is-4">Pinecone</h1>
+          <img src="https://hyperspectral-nerf.github.io/supplemental-results-data/raw-images/hs_PINECONE_0.png" />
+          <br />
+          <br />
+          <br />
+          <br />
+          <h1 class="title is-3">Surface Optics Camera Datasets</h1>
+          <h1 class="title is-4">Rosemary</h1>
+          <img src="https://hyperspectral-nerf.github.io/supplemental-results-data/raw-images/hs_rosemary_white_2.png" />
+          <br />
+          <br />
+          <h1 class="title is-4">Basil</h1>
+          <img src="https://hyperspectral-nerf.github.io/supplemental-results-data/raw-images/hs_basil_white_2.png" />
+          <br />
+          <br />
+          <h1 class="title is-4">Tools</h1>
+          <img src="https://hyperspectral-nerf.github.io/supplemental-results-data/raw-images/hs_tools_white_2.png" />
+          <br />
+          <br />
+          <h1 class="title is-4">Origami</h1>
+          <img src="https://hyperspectral-nerf.github.io/supplemental-results-data/raw-images/hs_origami_white_2.png" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Raw Images -->
+
+  <!-- RGB Baseline Comparisons -->
+  <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container box">
+        <!-- rgb -->
+        <a href="#rgb" data-action="collapse">
+          <h2 class="title is-3">RGB Baseline Comparisons</h2>
+          <p>Our HS-NeRF approach (Ours-Hyper) using 128 channels clearly outperforms NeRFs using only RGB</p>
+        </a>
+
+        <div class="is-centered has-text-centered is-collapsible" id="rgb">
+
+          <div class="column" style="width:25%;float: left;">
+            Sample <u>ground truth</u> image
+          </div>
+          <div class="column" style="width:75%;margin-left:auto;">
+            <div class="columns table-header is-full">
+              <div class="column">
+                <u>nerfacto</u><br />
+                (baseline)
+              </div>
+              <div class="column">
+                <u>Ours-RGB</u><br />
+                (discrete 3ch radiance & transmittance)
+              </div>
+              <div class="column">
+                <u>Ours-Cont</u><br />
+                (continuous 3ch radiance & transmittance)
+              </div>
+              <div class="column">
+                <u>Ours-Hyper</u><br />
+                (HS-NeRF, continuous 128ch)
+              </div>
+            </div>
+          </div>
+
+          <div style="display: flex; align-items: stretch;">
+            <div style="width: 25%; background-color: tranpsarent; display: flex; align-items: center; justify-content: center; margin-right:10px;">
+              <img src="https://hyperspectral-nerf.github.io/supplemental-results-data/rgb/FAKEPLANT1/frame_00137.jpg" style="max-height: 100%;"/>
+            </div>
+            <video autoplay muted loop controls style="width: 75%;">
+              <source src="https://hyperspectral-nerf.github.io/supplemental-results-data/rgb/FAKEPLANT1/labeled_black_rgb-montage.mp4" type='video/mp4' />
+            </video>
+          </div>
+          <br />
+          <div style="display: flex; align-items: stretch;">
+            <div style="width: 25%; background-color: transparent; display: flex; align-items: center; justify-content: center; margin-right:10px;">
+              <img src="https://hyperspectral-nerf.github.io/supplemental-results-data/rgb/FAKEPLANT2/frame_00137.jpg" style="max-height: 100%;"/>
+            </div>
+            <video autoplay muted loop controls style="width: 75%;">
+              <source src="https://hyperspectral-nerf.github.io/supplemental-results-data/rgb/FAKEPLANT2/labeled_camera_path_single_loop_7s_narrow-rgb-montage.mp4" type='video/mp4' />
+            </video>
+          </div>
+          <br />
+          <div style="display: flex; align-items: stretch;">
+            <div style="width: 25%; background-color: tranpsarent; display: flex; align-items: center; justify-content: center; margin-right:10px;">
+              <img src="https://hyperspectral-nerf.github.io/supplemental-results-data/rgb/PINECONE/white_frame_00137.jpg" style="max-height: 100%;"/>
+            </div>
+            <video autoplay muted loop controls style="width: 75%;">
+              <source src="https://hyperspectral-nerf.github.io/supplemental-results-data/rgb/PINECONE/labeled_white_rgb-montage.mp4" type='video/mp4' />
+            </video>
+          </div>
+          <div style="display: flex; align-items: stretch;">
+            <div style="width: 25%; background-color: tranpsarent; display: flex; align-items: center; justify-content: center; margin-right:10px;">
+              <img src="https://hyperspectral-nerf.github.io/supplemental-results-data/rgb/PINECONE/black_frame_00137.jpg" style="max-height: 100%;"/>
+            </div>
+            <video autoplay muted loop controls style="width: 75%;">
+              <source src="https://hyperspectral-nerf.github.io/supplemental-results-data/rgb/PINECONE/labeled_black_rgb-montage.mp4" type='video/mp4' />
+            </video>
+          </div>
+          <br />
+          <div style="display: flex; align-items: stretch;">
+            <video autoplay muted loop controls style="width: 25%;">
+              <source src="https://hyperspectral-nerf.github.io/supplemental-results-data/SurfaceOptics/Rosemary_GT_reversed.mp4" type='video/mp4' />
+            </video>
+            <video autoplay muted loop controls style="width: 75%;">
+              <source src="https://hyperspectral-nerf.github.io/supplemental-results-data/SurfaceOptics/Rosemary_RGB.mp4" type='video/mp4' />
+            </video>
+          </div>
+          <div style="display: flex; align-items: stretch;">
+            <video autoplay muted loop controls style="width: 25%;">
+              <source src="https://hyperspectral-nerf.github.io/supplemental-results-data/SurfaceOptics/Basil_GT_reversed.mp4" type='video/mp4' />
+            </video>
+            <video autoplay muted loop controls style="width: 75%;">
+              <source src="https://hyperspectral-nerf.github.io/supplemental-results-data/SurfaceOptics/Basil_RGB.mp4" type='video/mp4' />
+            </video>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End RGB Baseline Comparisons -->
+
+  <!-- Depth -->
+  <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container box">
+        <!-- Depth -->
+        <a href="#Depth" data-action="collapse">
+          <h2 class="title is-3">Depth Maps</h2>
+          <p>
+            <!-- Depth maps provide a sanity check that our reconstructions are reasonable. -->
+            Depth maps can reveal issues with the 3D structures of NeRFs that are not immediately apparent in the rendered images.
+            <br />Qualitatively, ours is noticeably better than the rgb baselines, and is among the best of the ablations.</p>
+        </a>
+
+        <div class="is-centered has-text-centered is-collapsible" id="Depth">
+
+          <h1 class="title is-3">RGB</h1>
+          Comparing the depth maps against RGB NeRF baselines, we find that our hyperspectral NeRF produces much better results.
+
+          <div class="is-centered has-text-centered">
+            <div class="column" style="width:66.66%;margin-left:auto;margin-right: auto;">
+              <div class="columns table-header is-full">
+                <div class="column">
+                  <u>nerfacto</u><br />
+                  (baseline)
+                </div>
+                <div class="column">
+                  <u>Ours-RGB</u><br />
+                  (discrete 3ch radiance & transmittance)
+                </div>
+                <div class="column">
+                  <u>Ours-Cont</u><br />
+                  (continuous 3ch radiance & transmittance)
+                </div>
+                <div class="column">
+                  <u>Ours-Hyper</u><br />
+                  (HS-NeRF, continuous 128ch)
+                </div>
+              </div>
+            </div>
+            <div style="width:66.66%;margin-left:auto;margin-right: auto;">
+              <img src="https://hyperspectral-nerf.github.io/supplemental-results-data/depth/FAKEPLANT1_rgb.png" type='video/mp4' />
+              <img src="https://hyperspectral-nerf.github.io/supplemental-results-data/depth/FAKEPLANT2_rgb.png" type='video/mp4' />
+              <img src="https://hyperspectral-nerf.github.io/supplemental-results-data/depth/PINECONE_rgb.png" type='video/mp4' />
+            </div>
+          </div>
+          <br />
+          <br />
+
+          <h1 class="title is-3">Ablations</h1>
+          Comparing the depth maps of ablations, ours and 
+            <math xmlns="http://www.w3.org/1998/Math/MathML" style="color:rgba(0,0,0,255);color:rgb(0,0,0);font-size:1.25rem;"><mstyle><mrow><mtable columnspacing="0.167em" columnalign="right center left" displaystyle="true"><mtr><mtd><mrow><msub><mi>C</mi><mn>1</mn></msub></mrow><mrow><msub><mi>&#x3C3;</mi><mn>0</mn></msub></mrow><mrow><msub><mi>P</mi><mn>0</mn></msub></mrow></mtd></mtr></mtable></mrow></mstyle></math>
+          are consistent and high quality, with the fewest spurious discontinuities in foreground surfaces.
+          <br />
+            <math xmlns="http://www.w3.org/1998/Math/MathML" style="color:rgba(0,0,0,255);color:rgb(0,0,0);font-size:1.25rem;"><mstyle><mrow><mtable columnspacing="0.167em" columnalign="right center left" displaystyle="true"><mtr><mtd><mrow><msub><mi>C</mi><mn>1</mn></msub></mrow><mrow><msub><mi>&#x3C3;</mi><mn>1</mn></msub></mrow><mrow><msub><mi>P</mi><mn>0</mn></msub></mrow></mtd></mtr></mtable></mrow></mstyle></math>
+          is notably strong for the Anacampseros scene, but finds a completely degenerate solution for both the Caladium and Pinecone scenes, likely due to low contrast between the foreground and background color (black).
+
+          <div class="is-centered has-text-centered">
+            <div class="column">
+              <div class="columns table-header is-full">
+                <div class="column">
+                  <math xmlns="http://www.w3.org/1998/Math/MathML" style="color:rgba(0,0,0,255);color:rgb(0,0,0);font-size:1.25rem;"><mstyle><mrow><mtable columnspacing="0.167em" columnalign="right center left" displaystyle="true"><mtr><mtd><mrow><msub><mi>C</mi><mn>1</mn></msub></mrow></mtd></mtr><mtr><mtd><mrow><msub><mi>&#x3C3;</mi><mn>0</mn></msub></mrow></mtd></mtr><mtr><mtd><mrow><msub><mi>P</mi><mn>0</mn></msub></mrow></mtd></mtr></mtable></mrow></mstyle></math>
+                </div>
+                <div class="column">
+                  <math xmlns="http://www.w3.org/1998/Math/MathML" style="color:rgba(0,0,0,255);color:rgb(0,0,0);font-size:1.25rem;"><mstyle><mrow><mtable columnspacing="0.167em" columnalign="right center left" displaystyle="true"><mtr><mtd><mrow><msub><mi>C</mi><mn>1</mn></msub></mrow></mtd></mtr><mtr><mtd><mrow><msub><mi>&#x3C3;</mi><mn>1</mn></msub></mrow></mtd></mtr><mtr><mtd><mrow><msub><mi>P</mi><mn>0</mn></msub></mrow></mtd></mtr></mtable></mrow></mstyle></math>
+                </div>
+                <div class="column">
+                  <math xmlns="http://www.w3.org/1998/Math/MathML" style="color:rgba(0,0,0,255);color:rgb(0,0,0);font-size:1.25rem;"><mstyle><mrow><mtable columnspacing="0.167em" columnalign="right center left" displaystyle="true"><mtr><mtd><mi>C</mi></mtd></mtr><mtr><mtd><mrow><msub><mi>&#x3C3;</mi><mn>0</mn></msub></mrow></mtd></mtr><mtr><mtd><mrow><msub><mi>P</mi><mn>0</mn></msub></mrow></mtd></mtr></mtable></mrow></mstyle></math>
+                  <br />
+                  (ours)
+                </div>
+                <div class="column">
+                  <math xmlns="http://www.w3.org/1998/Math/MathML" style="color:rgba(0,0,0,255);color:rgb(0,0,0);font-size:1.25rem;"><mstyle><mrow><mtable columnspacing="0.167em" columnalign="right center left" displaystyle="true"><mtr><mtd><mi>C</mi></mtd></mtr><mtr><mtd><mi>&#x3C3;</mi></mtd></mtr><mtr><mtd><mrow><msub><mi>P</mi><mn>0</mn></msub></mrow></mtd></mtr></mtable></mrow></mstyle></math>
+                </div>
+                <div class="column">
+                  <math xmlns="http://www.w3.org/1998/Math/MathML" style="color:rgba(0,0,0,255);color:rgb(0,0,0);font-size:1.25rem;"><mstyle><mrow><mtable columnspacing="0.167em" columnalign="right center left" displaystyle="true"><mtr><mtd><mrow><msub><mi>C</mi><mn>2</mn></msub></mrow></mtd></mtr><mtr><mtd><mrow><msub><mi>&#x3C3;</mi><mn>2</mn></msub></mrow></mtd></mtr><mtr><mtd><mrow><msub><mi>P</mi><mn>0</mn></msub></mrow></mtd></mtr></mtable></mrow></mstyle></math>
+                </div>
+                <div class="column">
+                  <math xmlns="http://www.w3.org/1998/Math/MathML" style="color:rgba(0,0,0,255);color:rgb(0,0,0);font-size:1.25rem;"><mstyle><mrow><mtable columnspacing="0.167em" columnalign="right center left" displaystyle="true"><mtr><mtd><mi>C</mi></mtd></mtr><mtr><mtd><mi>&#x3C3;</mi></mtd></mtr><mtr><mtd><mrow><msub><mi>P</mi><mi>&#x3BB;</mi></msub></mrow></mtd></mtr></mtable></mrow></mstyle></math>
+                </div>
+              </div>
+            </div>
+            <div>
+              <img src="https://hyperspectral-nerf.github.io/supplemental-results-data/depth/FAKEPLANT1.png" type='video/mp4' />
+              <img src="https://hyperspectral-nerf.github.io/supplemental-results-data/depth/FAKEPLANT2.png" type='video/mp4' />
+              <img src="https://hyperspectral-nerf.github.io/supplemental-results-data/depth/PINECONE.png" type='video/mp4' />
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ablations -->
+  <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container box">
+        <!-- Ablations -->
+        <a href="#ablations" data-action="collapse">
+          <h2 class="title is-3">Ablations</h2>
+          <p>Qualitatively, our stated approach appears among the best, but slightly different architectures are not significantly worse.</p>
+        </a>
+
+        <div class="is-centered has-text-centered is-collapsible" id="ablations">
+          <div class="column has-text-justified">
+            Careful observation reveals that the networks using
+              <math xmlns="http://www.w3.org/1998/Math/MathML" style="color:rgba(0,0,0,255);color:rgb(0,0,0);font-size:1.25rem;"><mstyle><mrow><mtable columnspacing="0.167em" columnalign="right center left" displaystyle="true"><mtr><mtd><mrow><msub><mi>C</mi></msub></mrow></mtd></mtr></mtable></mrow></mstyle></math>
+            (including ours) tend to be the most accurate in terms of absolute intensity (see for example that the other networks tend to over-estimate the leaf brightnesses in the middle row).
+            Meanwhile, the network using
+              <math xmlns="http://www.w3.org/1998/Math/MathML" style="color:rgba(0,0,0,255);color:rgb(0,0,0);font-size:1.25rem;"><mstyle><mrow><mtable columnspacing="0.167em" columnalign="right center left" displaystyle="true"><mtr><mtd><mrow><msub><mi>C</mi><mn>2</mn></msub></mrow></mtd></mtr></mtable></mrow></mstyle></math>
+            often appears fuzzy, which suggests that mixing together the spatial and wavelength information is not as efficient.
+            Finally, although the networks uing 
+              <math xmlns="http://www.w3.org/1998/Math/MathML" style="color:rgba(0,0,0,255);color:rgb(0,0,0);font-size:1.25rem;"><mstyle><mrow><mtable columnspacing="0.167em" columnalign="right center left" displaystyle="true"><mtr><mtd><mrow><msub><mi>C</mi><mn>1</mn></msub></mrow></mtd></mtr></mtable></mrow></mstyle></math>
+            generally appear slightly sharper than ours, they do not have a continuous wavelength representation so they do not as naturally interpolate wavelengths and, as mentioned, they tend to have slightly less accurate absolute intensities (e.g. on the middle row's leaf brightness).
+          </div>
+
+          <div class="box">
+            <a href="#ablations-fixed-sweep" data-action="collapse">
+              <h2 class="title is-4">Fixed camera viewpoint not in training set (wavelength sweep)</h2>
+              <p>This video is the easiest for comparing the performance between different methods.</p>
+            </a>
+            <div class="is-centered has-text-centered is-collapsible" id="ablations-fixed-sweep">
+              In this video, t = 0s depicts the shortest wavelength (image channel 0) and we depict progressively longer wavelengths until the end (t = 5s) depicts the longest wavelength (image channel 127).  This camera view was not in the training set.
+              <div class="column">
+                <div class="columns table-header is-full">
+                  <div class="column">
+                    <h1 class="title is-5">GROUND TRUTH</h1>
+                  </div>
+                  <div class="column">
+                    <h1 class="title is-5">
+                      <math xmlns="http://www.w3.org/1998/Math/MathML" style="color:rgba(0,0,0,255);color:rgb(0,0,0);font-size:1.25rem;"><mstyle><mrow><mtable columnspacing="0.167em" columnalign="right center left" displaystyle="true"><mtr><mtd><mrow><msub><mi>C</mi><mn>1</mn></msub></mrow></mtd></mtr><mtr><mtd><mrow><msub><mi>&#x3C3;</mi><mn>0</mn></msub></mrow></mtd></mtr><mtr><mtd><mrow><msub><mi>P</mi><mn>0</mn></msub></mrow></mtd></mtr></mtable></mrow></mstyle></math>
+                    </h1>
+                  </div>
+                  <div class="column">
+                    <math xmlns="http://www.w3.org/1998/Math/MathML" style="color:rgba(0,0,0,255);color:rgb(0,0,0);font-size:1.25rem;"><mstyle><mrow><mtable columnspacing="0.167em" columnalign="right center left" displaystyle="true"><mtr><mtd><mrow><msub><mi>C</mi><mn>1</mn></msub></mrow></mtd></mtr><mtr><mtd><mrow><msub><mi>&#x3C3;</mi><mn>1</mn></msub></mrow></mtd></mtr><mtr><mtd><mrow><msub><mi>P</mi><mn>0</mn></msub></mrow></mtd></mtr></mtable></mrow></mstyle></math>
+                  </div>
+                  <div class="column">
+                    <math xmlns="http://www.w3.org/1998/Math/MathML" style="color:rgba(0,0,0,255);color:rgb(0,0,0);font-size:1.25rem;"><mstyle><mrow><mtable columnspacing="0.167em" columnalign="right center left" displaystyle="true"><mtr><mtd><mi>C</mi></mtd></mtr><mtr><mtd><mrow><msub><mi>&#x3C3;</mi><mn>0</mn></msub></mrow></mtd></mtr><mtr><mtd><mrow><msub><mi>P</mi><mn>0</mn></msub></mrow></mtd></mtr></mtable></mrow></mstyle></math>
+                    <br />
+                    (ours)
+                  </div>
+                  <div class="column">
+                    <math xmlns="http://www.w3.org/1998/Math/MathML" style="color:rgba(0,0,0,255);color:rgb(0,0,0);font-size:1.25rem;"><mstyle><mrow><mtable columnspacing="0.167em" columnalign="right center left" displaystyle="true"><mtr><mtd><mi>C</mi></mtd></mtr><mtr><mtd><mi>&#x3C3;</mi></mtd></mtr><mtr><mtd><mrow><msub><mi>P</mi><mn>0</mn></msub></mrow></mtd></mtr></mtable></mrow></mstyle></math>
+                  </div>
+                  <div class="column">
+                    <math xmlns="http://www.w3.org/1998/Math/MathML" style="color:rgba(0,0,0,255);color:rgb(0,0,0);font-size:1.25rem;"><mstyle><mrow><mtable columnspacing="0.167em" columnalign="right center left" displaystyle="true"><mtr><mtd><mrow><msub><mi>C</mi><mn>2</mn></msub></mrow></mtd></mtr><mtr><mtd><mrow><msub><mi>&#x3C3;</mi><mn>2</mn></msub></mrow></mtd></mtr><mtr><mtd><mrow><msub><mi>P</mi><mn>0</mn></msub></mrow></mtd></mtr></mtable></mrow></mstyle></math>
+                  </div>
+                  <div class="column">
+                    <math xmlns="http://www.w3.org/1998/Math/MathML" style="color:rgba(0,0,0,255);color:rgb(0,0,0);font-size:1.25rem;"><mstyle><mrow><mtable columnspacing="0.167em" columnalign="right center left" displaystyle="true"><mtr><mtd><mi>C</mi></mtd></mtr><mtr><mtd><mi>&#x3C3;</mi></mtd></mtr><mtr><mtd><mrow><msub><mi>P</mi><mi>&#x3BB;</mi></msub></mrow></mtd></mtr></mtable></mrow></mstyle></math>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <!-- order=(1 2 4a 4 3 5) -->
+                <video autoplay muted loop controls>
+                  <source src="https://hyperspectral-nerf.github.io/supplemental-results-data/stationary-renders-hs/all_labeled_channel_stationary_Method_montage.mp4" type='video/mp4' />
+                </video>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="box">
+            <a href="#ablations-flying-6wide" data-action="collapse">
+              <h2 class="title is-4">Moving camera viewpoints (6 wavelengths)</h2>
+              <p>This video shows the camera moving to evidence that the NeRF's performance is consistently good across novel viewpoints.</p>
+            </a>
+            <div class="is-centered has-text-centered is-collapsible" id="ablations-flying-6wide">
+
+              <div class="message" style="width:fit-content;margin:auto;padding: 10px 20px;">
+                Select which scene to view:
+                <div class="has-text-justified" style="width:fit-content;margin:auto">
+                  <input type="radio" id="scene1" name="video" value="https://hyperspectral-nerf.github.io/supplemental-results-data/6wavelengths/FAKEPLANT1/abl-method-montage_half.mp4" onchange="changeVideoSource()">
+                  <label for="scene1">Anacampseros</label>
+                  <br />
+                  <input type="radio" id="scene2" name="video" value="https://hyperspectral-nerf.github.io/supplemental-results-data/6wavelengths/FAKEPLANT2/abl-method-montage_half.mp4" onchange="changeVideoSource()" checked>
+                  <label for="scene2">Caladium</label>
+                  <br />
+                  <input type="radio" id="scene3" name="video" value="https://hyperspectral-nerf.github.io/supplemental-results-data/6wavelengths/PINECONE/abl-method-montage_half.mp4" onchange="changeVideoSource()">
+                  <label for="scene3">Pinecone</label>
+                </div>
+              </div>
+              <br />
+              
+              <script>
+                function changeVideoSource() {
+                    var radios = document.getElementsByName('video');
+                    var videoPlayer = document.getElementById('6wavelengths_video_player');
+
+                    for(var i = 0; i < radios.length; i++) {
+                        if(radios[i].checked) {
+                            videoPlayer.src = radios[i].value;
+                            break;
+                        }
+                    }
+                }
+              </script>
+
+              This grid of videos shows different ablation variations as columns and different wavelengths as rows.
+              <div class="column" style="width:85.714286%;margin-left:auto;">
+                <div class="columns table-header is-full">
+                  <div class="column">
+                    <h1 class="title is-5">
+                      <math xmlns="http://www.w3.org/1998/Math/MathML" style="color:rgba(0,0,0,255);color:rgb(0,0,0);font-size:1.25rem;"><mstyle><mrow><mtable columnspacing="0.167em" columnalign="right center left" displaystyle="true"><mtr><mtd><mrow><msub><mi>C</mi><mn>1</mn></msub></mrow></mtd></mtr><mtr><mtd><mrow><msub><mi>&#x3C3;</mi><mn>0</mn></msub></mrow></mtd></mtr><mtr><mtd><mrow><msub><mi>P</mi><mn>0</mn></msub></mrow></mtd></mtr></mtable></mrow></mstyle></math>
+                    </h1>
+                  </div>
+                  <div class="column">
+                    <math xmlns="http://www.w3.org/1998/Math/MathML" style="color:rgba(0,0,0,255);color:rgb(0,0,0);font-size:1.25rem;"><mstyle><mrow><mtable columnspacing="0.167em" columnalign="right center left" displaystyle="true"><mtr><mtd><mrow><msub><mi>C</mi><mn>1</mn></msub></mrow></mtd></mtr><mtr><mtd><mrow><msub><mi>&#x3C3;</mi><mn>1</mn></msub></mrow></mtd></mtr><mtr><mtd><mrow><msub><mi>P</mi><mn>0</mn></msub></mrow></mtd></mtr></mtable></mrow></mstyle></math>
+                  </div>
+                  <div class="column">
+                    <math xmlns="http://www.w3.org/1998/Math/MathML" style="color:rgba(0,0,0,255);color:rgb(0,0,0);font-size:1.25rem;"><mstyle><mrow><mtable columnspacing="0.167em" columnalign="right center left" displaystyle="true"><mtr><mtd><mi>C</mi></mtd></mtr><mtr><mtd><mrow><msub><mi>&#x3C3;</mi><mn>0</mn></msub></mrow></mtd></mtr><mtr><mtd><mrow><msub><mi>P</mi><mn>0</mn></msub></mrow></mtd></mtr></mtable></mrow></mstyle></math>
+                    <br />
+                    (ours)
+                  </div>
+                  <div class="column">
+                    <math xmlns="http://www.w3.org/1998/Math/MathML" style="color:rgba(0,0,0,255);color:rgb(0,0,0);font-size:1.25rem;"><mstyle><mrow><mtable columnspacing="0.167em" columnalign="right center left" displaystyle="true"><mtr><mtd><mi>C</mi></mtd></mtr><mtr><mtd><mi>&#x3C3;</mi></mtd></mtr><mtr><mtd><mrow><msub><mi>P</mi><mn>0</mn></msub></mrow></mtd></mtr></mtable></mrow></mstyle></math>
+                  </div>
+                  <div class="column">
+                    <math xmlns="http://www.w3.org/1998/Math/MathML" style="color:rgba(0,0,0,255);color:rgb(0,0,0);font-size:1.25rem;"><mstyle><mrow><mtable columnspacing="0.167em" columnalign="right center left" displaystyle="true"><mtr><mtd><mrow><msub><mi>C</mi><mn>2</mn></msub></mrow></mtd></mtr><mtr><mtd><mrow><msub><mi>&#x3C3;</mi><mn>2</mn></msub></mrow></mtd></mtr><mtr><mtd><mrow><msub><mi>P</mi><mn>0</mn></msub></mrow></mtd></mtr></mtable></mrow></mstyle></math>
+                  </div>
+                  <div class="column">
+                    <math xmlns="http://www.w3.org/1998/Math/MathML" style="color:rgba(0,0,0,255);color:rgb(0,0,0);font-size:1.25rem;"><mstyle><mrow><mtable columnspacing="0.167em" columnalign="right center left" displaystyle="true"><mtr><mtd><mi>C</mi></mtd></mtr><mtr><mtd><mi>&#x3C3;</mi></mtd></mtr><mtr><mtd><mrow><msub><mi>P</mi><mi>&#x3BB;</mi></msub></mrow></mtd></mtr></mtable></mrow></mstyle></math>
+                  </div>
+                </div>
+              </div>
+              <div style="width:14.28571%; float:left;">
+                <!-- 15, 35, 55, 75, 95, 105 -->
+                <!-- 476.62660661, 576.3200419 , 674.80191113, 772.38069829,
+       869.3648874 , 917.73040893 -->
+                <div style="aspect-ratio:450/800; align-items:center;display:flex;">
+                  <p>Ch 15 (477nm)</p>
+                </div>
+                <div style="aspect-ratio:450/800; align-items:center;display:flex;">
+                  <p>Ch 35 (576nm)</p>
+                </div>
+                <div style="aspect-ratio:450/800; align-items:center;display:flex;">
+                  <p>Ch 55 (675nm)</p>
+                </div>
+                <div style="aspect-ratio:450/800; align-items:center;display:flex;">
+                  <p>Ch 75 (772nm)</p>
+                </div>
+                <div style="aspect-ratio:450/800; align-items:center;display:flex;">
+                  <p>Ch 95 (869nm)</p>
+                </div>
+                <div style="aspect-ratio:450/800; align-items:center;display:flex;">
+                  <p>Ch 105 (918nm)</p>
+                </div>
+              </div>
+              <div style="width:85.714286%;margin-left:auto;">
+                <video autoplay muted loop controls id="6wavelengths_video_player">
+                  <!-- <source src="https://hyperspectral-nerf.github.io/supplemental-results-data/6wavelengths/FAKEPLANT2/abl-method-montage.mp4" type='video/mp4' /> -->
+                  <source src="https://hyperspectral-nerf.github.io/supplemental-results-data/6wavelengths/FAKEPLANT2/abl-method-montage_half.mp4" type='video/mp4' />
+                </video>
+              </div>
+            </div>
+          </div>
+
+          <div class="box">
+            <a href="#ablations-flying-sweep" data-action="collapse">
+              <h2 class="title is-4">Moving camera viewpoints (wavelength sweep)</h2>
+              <p>This video shows the camera moving simultaneously while the wavelength sweeps to evidence that the NeRF's performance is consistently good across novel viewpoints over all wavelengths.</p>
+            </a>
+            <div class="is-centered has-text-centered is-collapsible" id="ablations-flying-sweep">
+              In this video, t = 0s depicts the shortest wavelength (image channel 0) and we depict progressively longer wavelengths until the end (t = 5s) depicts the longest wavelength (image channel 127).  This camera view was not in the training set.
+              <div class="column" style="width:85.714286%;margin-left:auto;">
+                <div class="columns table-header is-full">
+                  <div class="column">
+                    <h1 class="title is-5">
+                      <math xmlns="http://www.w3.org/1998/Math/MathML" style="color:rgba(0,0,0,255);color:rgb(0,0,0);font-size:1.25rem;"><mstyle><mrow><mtable columnspacing="0.167em" columnalign="right center left" displaystyle="true"><mtr><mtd><mrow><msub><mi>C</mi><mn>1</mn></msub></mrow></mtd></mtr><mtr><mtd><mrow><msub><mi>&#x3C3;</mi><mn>0</mn></msub></mrow></mtd></mtr><mtr><mtd><mrow><msub><mi>P</mi><mn>0</mn></msub></mrow></mtd></mtr></mtable></mrow></mstyle></math>
+                    </h1>
+                  </div>
+                  <div class="column">
+                    <math xmlns="http://www.w3.org/1998/Math/MathML" style="color:rgba(0,0,0,255);color:rgb(0,0,0);font-size:1.25rem;"><mstyle><mrow><mtable columnspacing="0.167em" columnalign="right center left" displaystyle="true"><mtr><mtd><mrow><msub><mi>C</mi><mn>1</mn></msub></mrow></mtd></mtr><mtr><mtd><mrow><msub><mi>&#x3C3;</mi><mn>1</mn></msub></mrow></mtd></mtr><mtr><mtd><mrow><msub><mi>P</mi><mn>0</mn></msub></mrow></mtd></mtr></mtable></mrow></mstyle></math>
+                  </div>
+                  <div class="column">
+                    <math xmlns="http://www.w3.org/1998/Math/MathML" style="color:rgba(0,0,0,255);color:rgb(0,0,0);font-size:1.25rem;"><mstyle><mrow><mtable columnspacing="0.167em" columnalign="right center left" displaystyle="true"><mtr><mtd><mi>C</mi></mtd></mtr><mtr><mtd><mrow><msub><mi>&#x3C3;</mi><mn>0</mn></msub></mrow></mtd></mtr><mtr><mtd><mrow><msub><mi>P</mi><mn>0</mn></msub></mrow></mtd></mtr></mtable></mrow></mstyle></math>
+                    <br />
+                    (ours)
+                  </div>
+                  <div class="column">
+                    <math xmlns="http://www.w3.org/1998/Math/MathML" style="color:rgba(0,0,0,255);color:rgb(0,0,0);font-size:1.25rem;"><mstyle><mrow><mtable columnspacing="0.167em" columnalign="right center left" displaystyle="true"><mtr><mtd><mi>C</mi></mtd></mtr><mtr><mtd><mi>&#x3C3;</mi></mtd></mtr><mtr><mtd><mrow><msub><mi>P</mi><mn>0</mn></msub></mrow></mtd></mtr></mtable></mrow></mstyle></math>
+                  </div>
+                  <div class="column">
+                    <math xmlns="http://www.w3.org/1998/Math/MathML" style="color:rgba(0,0,0,255);color:rgb(0,0,0);font-size:1.25rem;"><mstyle><mrow><mtable columnspacing="0.167em" columnalign="right center left" displaystyle="true"><mtr><mtd><mrow><msub><mi>C</mi><mn>2</mn></msub></mrow></mtd></mtr><mtr><mtd><mrow><msub><mi>&#x3C3;</mi><mn>2</mn></msub></mrow></mtd></mtr><mtr><mtd><mrow><msub><mi>P</mi><mn>0</mn></msub></mrow></mtd></mtr></mtable></mrow></mstyle></math>
+                  </div>
+                  <div class="column">
+                    <math xmlns="http://www.w3.org/1998/Math/MathML" style="color:rgba(0,0,0,255);color:rgb(0,0,0);font-size:1.25rem;"><mstyle><mrow><mtable columnspacing="0.167em" columnalign="right center left" displaystyle="true"><mtr><mtd><mi>C</mi></mtd></mtr><mtr><mtd><mi>&#x3C3;</mi></mtd></mtr><mtr><mtd><mrow><msub><mi>P</mi><mi>&#x3BB;</mi></msub></mrow></mtd></mtr></mtable></mrow></mstyle></math>
+                  </div>
+                </div>
+              </div>
+              <div style="width:85.714286%;margin-left:auto;">
+                <video autoplay muted loop controls>
+                  <source src="https://hyperspectral-nerf.github.io/supplemental-results-data/circular-renders-hs/all_labeled_channel_circular_camera_path-Method_montage.mp4" type='video/mp4' />
+                </video>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Ablations -->
+
+  <!-- Super-resolution -->
+  <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container box">
+        <a href="#super-resolution" data-action="collapse">
+          <h2 class="title is-3">Super-resolution (Wavelength Interpolation)</h2>
+          <p>Our NeRF loses almost no accuracy in predicting the full hyperspectral image, even when trained on only 1/8th of the wavelengths.</p>
+        </a>
+        <!-- <div class="columns is-centered has-text-centered"> -->
+        <div class="is-centered has-text-centered is-collapsible" id="super-resolution">
+
+          <br />
+          <!-- HS Sweep, camera stationary -->
+          <div class="column is-full box">
+            <!-- Display the labels 128 64 32 16 centered and above the video -->
+            <!-- <h3 class="title is-4">Videos: Sweep hyperspectral wavelengths</h3> -->
+            <a href="#hs-sweep-videos-stationary" data-action="collapse" class="collapsible-head">
+              <h3 class="title is-4">Videos: Sweep hyperspectral wavelengths &nbsp;&nbsp;[+]</h3>
+              <p>Our NeRFs can accurately predict an unseen viewpoint consistently across all wavelengths.
+              <br />
+              Furthermore, even withholding 87.5% of wavelengths from the training set has marginal impact on accuracy.</p>
+            </a>
+
+            <div class="is-centered has-text-centered is-collapsible" id="hs-sweep-videos-stationary">
+              <div class="column">
+                <div class="columns is-full table-header">
+                  <div class="column">
+                    <h1 class="title is-5">GROUND TRUTH</h1>
+                  </div>
+                  <div class="column">
+                    <h1 class="title is-5">Trained on every wavelength</h1>
+                  </div>
+                  <div class="column">
+                    <h1 class="title is-5">Trained on every 2nd wavelength</h1>
+                  </div>
+                  <div class="column">
+                    <h1 class="title is-5">Trained on every 4th wavelength</h1>
+                  </div>
+                  <div class="column">
+                    <h1 class="title is-5">Trained on every 8th wavelength</h1>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <video autoplay muted loop controls>
+                  <source src="https://hyperspectral-nerf.github.io/supplemental-results-data/stationary-renders-hs/all_labeled_channel_stationary_everyNth-montage.mp4" type='video/mp4' />
+                </video>
+              </div>
+              <!-- <video autoplay muted loop controls>
+                <source src="https://hyperspectral-nerf.github.io/supplemental-results-data/stationary-renders-hs/FAKEPLANT1/labeled_channel_stationary_everyNth-montage.mp4" type='video/mp4' />
+              </video>
+              <video autoplay muted loop controls>
+                <source src="https://hyperspectral-nerf.github.io/supplemental-results-data/stationary-renders-hs/FAKEPLANT2/labeled_channel_stationary_everyNth-montage.mp4" type='video/mp4' />
+              </video>
+              <video autoplay muted loop controls>
+                <source src="https://hyperspectral-nerf.github.io/supplemental-results-data/stationary-renders-hs/PINECONE/labeled_channel_stationary_everyNth-montage.mp4" type='video/mp4' />
+              </video> -->
+            </div>
+          </div>
+
+          <!-- HS Sweep, camera moving -->
+          <div class="column is-full box">
+            <!-- Display the labels 128 64 32 16 centered and above the video -->
+            <!-- <h3 class="title is-4">Videos: Sweep hyperspectral wavelengths</h3> -->
+            <a href="#hs-sweep-videos" data-action="collapse">
+              <h3 class="title is-4">Videos: Sweep hyperspectral wavelengths & Moving Camera &nbsp;&nbsp;[+]</h3>
+              <p>Watch this rotating video to see that the wavelength interpolation performance is consistently good across novel viewpoints.
+                <!-- Observe that interpolating wavelengths generalizes to new viewpoints, and training with 1/8th the wavelengths produces almost identical results as using all the wavelengths. -->
+              </p>
+            </a>
+            <!-- <a href="#hs-sweep-videos" data-action="collapse">Collapse/Expand</a> -->
+
+            <div class="is-centered has-text-centered is-collapsible" id="hs-sweep-videos" style="width: 80%; margin-left: auto;">
+              <div class="column">
+                <div class="columns is-full table-header">
+                  <div class="column">
+                    <h1 class="title is-5">Trained on every wavelength</h1>
+                  </div>
+                  <div class="column">
+                    <h1 class="title is-5">Trained on every 2nd wavelength</h1>
+                  </div>
+                  <div class="column">
+                    <h1 class="title is-5">Trained on every 4th wavelength</h1>
+                  </div>
+                  <div class="column">
+                    <h1 class="title is-5">Trained on every 8th wavelength</h1>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <video autoplay muted loop controls>
+                  <source src="https://hyperspectral-nerf.github.io/supplemental-results-data/circular-renders-hs/all_labeled_channel_circular_camera_path-everyNth-montage.mp4" type='video/mp4' />
+                </video>
+              </div>
+              <!-- <video autoplay muted loop controls>
+                <source src="https://hyperspectral-nerf.github.io/supplemental-results-data/circular-renders-hs/FAKEPLANT1/labeled_channel_circular_camera_path-everyNth-montage.mp4" type='video/mp4' />
+              </video>
+              <video autoplay muted loop controls>
+                <source src="https://hyperspectral-nerf.github.io/supplemental-results-data/circular-renders-hs/FAKEPLANT2/labeled_channel_circular_camera_path-everyNth-montage.mp4" type='video/mp4' />
+              </video>
+              <video autoplay muted loop controls>
+                <source src="https://hyperspectral-nerf.github.io/supplemental-results-data/circular-renders-hs/PINECONE/labeled_channel_circular_camera_path-everyNth-montage.mp4" type='video/mp4' />
+              </video> -->
+            </div>
+          </div>
+
+          <!-- Super-resolution as Images -->
+          <div class="column is-full box">
+            
+            <a href="#hs-sweep-images" data-action="collapse">
+              <h3 class="title is-4">Image Grid: Sweep hyperspectral wavelengths &nbsp;&nbsp;[+]</h3>
+              <p>Inspect the individual rendered images by wavelength and amount of interpolation.
+                <br />
+                This is the same as the video above, but in image form to allow for closer inspection.
+              </p>
+            </a>
+
+            <script>
+              populate_table_every = (scene, increment) => 
+              function() {
+                const col0 = document.getElementById('col0');
+                const col1 = document.getElementById('col1');
+                const col2 = document.getElementById('col2');
+                const col3 = document.getElementById('col3');
+                const col4 = document.getElementById('col4');
+                const col5 = document.getElementById('col5');
+                function create_label(text) {
+                  const label = document.createElement('div');
+                  label.classList.add('placeholder-img');
+                  label.textContent = text;
+                  return label;
+                }
+                function add_img(url, i, every) {
+                  const img = document.createElement('img');
+                  if (i % every == 0) {
+                    img.classList.add('in-training');
+                  } else {
+                    img.classList.add('in-eval');
+                  }
+                  img.src = url;
+                  return img;
+                }
+                console.log(increment);
+                for (let i = 0; i < 128; i += increment) {
+                  col0.appendChild(create_label(`Ch ${i}`));
+                  col1.appendChild(add_img('https://hyperspectral-nerf.github.io/supplemental-results-data/eval_images/' + scene + '/GROUND_TRUTH/jet_' + i + '.png', i, 1));
+                  col2.appendChild(add_img('https://hyperspectral-nerf.github.io/supplemental-results-data/eval_images/' + scene + '/every_1/jet_' + i + '.png', i, 1));
+                  col3.appendChild(add_img('https://hyperspectral-nerf.github.io/supplemental-results-data/eval_images/' + scene + '/every_2/jet_' + i + '.png', i, 2));
+                  col4.appendChild(add_img('https://hyperspectral-nerf.github.io/supplemental-results-data/eval_images/' + scene + '/every_4/jet_' + i + '.png', i, 4));
+                  col5.appendChild(add_img('https://hyperspectral-nerf.github.io/supplemental-results-data/eval_images/' + scene + '/every_8/jet_' + i + '.png', i, 8));
+                }
+              }
+              document.addEventListener('DOMContentLoaded', populate_table_every('FAKEPLANT2', 11));
+
+              function clear_table() {
+                for (let coli = 0; coli < 6; ++coli) {
+                  const col = document.getElementById('col' + coli);
+                  while (col.children.length > 1) {
+                    col.children[0].nextElementSibling.remove();
+                  }
+                }
+              }
+
+              function load_all() {
+                // first clear all but the first row in each column
+                clear_table();
+                const scene = document.querySelector('input[name="imageSweepScene"]:checked').value;
+                populate_table_every(scene, 1)();
+              }
+
+              function changeImageSweepScene() {
+                clear_table();
+                const scene = document.querySelector('input[name="imageSweepScene"]:checked').value;
+                populate_table_every(scene, 11)();
+              }
+            </script>
+
+            <div class="column is-full is-collapsible" id="hs-sweep-images">
+              <div>
+                Currently only every 11th wavelength is loaded.  <button onclick="load_all()">Load All Images (about 200MB / scene)</button>
+
+                <div class="message" style="width:fit-content;margin:auto;padding: 10px 20px;">
+                  Select which scene to view:
+                  <div class="has-text-justified" style="width:fit-content;margin:auto">
+                    <input type="radio" id="hs_im_scene1" name="imageSweepScene" value="FAKEPLANT1" onchange="changeImageSweepScene()">
+                    <label for="hs_im_scene1">Anacampseros</label>
+                    <br />
+                    <input type="radio" id="hs_im_scene2" name="imageSweepScene" value="FAKEPLANT2" onchange="changeImageSweepScene()" checked>
+                    <label for="hs_im_scene2">Caladium</label>
+                    <br />
+                    <input type="radio" id="hs_im_scene3" name="imageSweepScene" value="PINECONE" onchange="changeImageSweepScene()">
+                    <label for="hs_im_scene3">Pinecone</label>
+                  </div>
+                </div>
+              </div>
+              <div class="hs-legend">
+                Key:
+                <div class="in-training">Wavelength in train set</div>
+                <div class="in-eval">Wavelength NOT in train set</div>
+              </div>
+              <div class="hs-image-grid-container" style="max-height: 800px;">
+                <div class="grid-item pinned-col" id="col0" style="width: 100px;">
+                  <h1 class="item-header"></h1>
+                </div>
+                <div class="grid-item" id="col1">
+                    <h1 class="item-header pinned-row">Ground Truth</h1>
+                </div>
+                <div class="grid-item" id="col2">
+                    <h1 class="item-header pinned-row">Trained on every wavelength</h1>
+                </div>
+                <div class="grid-item" id="col3">
+                    <h1 class="item-header pinned-row">Trained on every 2nd wavelength</h1>
+                </div>
+                <div class="grid-item" id="col4">
+                    <h1 class="item-header pinned-row">Trained on every 4th wavelength</h1>
+                </div>
+                <div class="grid-item" id="col5">
+                    <h1 class="item-header pinned-row">Trained on every 8th wavelength</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Super-resolution -->
+
+  <!-- Camera Image Sensor Simulation -->
+  <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container box">
+        <a href="#camera-sim" data-action="collapse">
+          <h2 class="title is-3">Camera Image Sensor Simulation</h2>
+          <p>Hyperspectral NeRFs allow us to simulate arbitrary camera image sensors from a single reference image.</p>
+        </a>
+
+        <div class="is-centered is-collapsible content" id="camera-sim">
+          Different camera imaging sensors have different spectral responses which produce unique image qualities.  Similarly, filters are often used by photographers to achieve different artistic effects.  From a hyperspectral image, we theoretically have enough information to reconstruct what the image would look like if it were taken with a different camera sensor or filter.
+          <!-- In practice, this is challenging due to the limited quality of hyperspectral images.  However, because NeRF incorporates the information from many images, it may be possible to produce images of quality better than the source images. -->
+          <br />
+          <br />
+          We demonstrate results using the following procedure:
+          <ol>
+            <li>Construct a hyperspectral NeRF using HS-NeRF</li>
+            <li>Take a single photo with the target camera</li>
+            <li>Localize the target photo's camera pose in the NeRF scene</li>
+            <li>Render a hyperspectral image for that camera pose</li>
+            <li>Run a least-squares optimization to find spectral response functions which result in a simulated photo that best matches the target photo</li>
+            <li>Render the simulated photo</li>
+          </ol>
+          <br />
+          For each scene, we present simulated photos for an iPhone photo with various digital filters applied.
+          <br />
+          A number of different <b><u>target photos (left of each pair)</u></b> can be <b><u>simulated by HS-NeRF (right of each pair)</u></b> with excellent agreement.
+          <br />
+          Note that the agreement often appears so good/consistent that it seems as though a filter was applied to both target and simulation together, but the filters were only applied to the target photos, then the simulations were generated according to the above procedure.
+          <br />
+          <br />
+          <div class="columns is-full">
+            <div class="column is-one-third">
+              <img src="https://hyperspectral-nerf.github.io/supplemental-results-data/camera_sim/FAKEPLANT1/sidebyside.png" />
+              <img src="https://hyperspectral-nerf.github.io/supplemental-results-data/camera_sim/FAKEPLANT1/sidebyside_silvertone.png" />
+              <img src="https://hyperspectral-nerf.github.io/supplemental-results-data/camera_sim/FAKEPLANT1/sidebyside_saturated.png" />
+              <img src="https://hyperspectral-nerf.github.io/supplemental-results-data/camera_sim/FAKEPLANT1/sidebyside_dramatic-warm.png" />
+              <img src="https://hyperspectral-nerf.github.io/supplemental-results-data/camera_sim/FAKEPLANT1/sidebyside_vivid.png" />
+              <img src="https://hyperspectral-nerf.github.io/supplemental-results-data/camera_sim/FAKEPLANT1/sidebyside_gray.png" />
+              <!-- <img src="https://hyperspectral-nerf.github.io/supplemental-results-data/camera_sim/FAKEPLANT1/sidebyside_saturated.png" /> -->
+            </div>
+            <div class="column is-one-third">
+              <img src="https://hyperspectral-nerf.github.io/supplemental-results-data/camera_sim/FAKEPLANT2/sidebyside.png" />
+              <img src="https://hyperspectral-nerf.github.io/supplemental-results-data/camera_sim/FAKEPLANT2/sidebyside_gloomy.png" />
+              <img src="https://hyperspectral-nerf.github.io/supplemental-results-data/camera_sim/FAKEPLANT2/sidebyside_old.png" />
+              <img src="https://hyperspectral-nerf.github.io/supplemental-results-data/camera_sim/FAKEPLANT2/sidebyside_warm.png" />
+              <img src="https://hyperspectral-nerf.github.io/supplemental-results-data/camera_sim/FAKEPLANT2/sidebyside_gray.png" />
+              <img src="https://hyperspectral-nerf.github.io/supplemental-results-data/camera_sim/FAKEPLANT2/sidebyside_desaturated.png" />
+            </div>
+            <div class="column is-one-third">
+              <img src="https://hyperspectral-nerf.github.io/supplemental-results-data/camera_sim/PINECONE/sidebyside.png" />
+              <img src="https://hyperspectral-nerf.github.io/supplemental-results-data/camera_sim/PINECONE/sidebyside_desaturated.png" />
+              <img src="https://hyperspectral-nerf.github.io/supplemental-results-data/camera_sim/PINECONE/sidebyside_old.png" />
+              <img src="https://hyperspectral-nerf.github.io/supplemental-results-data/camera_sim/PINECONE/sidebyside_warm.png" />
+              <img src="https://hyperspectral-nerf.github.io/supplemental-results-data/camera_sim/PINECONE/sidebyside_gray_bak.png" />
+              <img src="https://hyperspectral-nerf.github.io/supplemental-results-data/camera_sim/PINECONE/sidebyside_cool.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Camera Image Sensor Simulation -->
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This page was built using the
+              <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project
+                Page Template</a>
+              which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              You are free to borrow the of this website, we
+              just ask that you link back to this page in the footer. <br />
+              This website is licensed under a
+              <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons
+                Attribution-ShareAlike 4.0 International
+                License</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Statcounter tracking code -->
+
+  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+  <!-- End of Statcounter Code -->
+
+  <script src="static/js/bulma-collapsible.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Initialize all elements with '.is-collapsible' class
+      bulmaCollapsible.attach('.is-collapsible');
+    });
+  </script>
+</body>
+
+</html>

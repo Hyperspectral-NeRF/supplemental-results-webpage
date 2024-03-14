@@ -1,0 +1,135 @@
+.hs-image-grid-container {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-y: auto;
+  padding: 0px;
+  position: relative;
+  /* background-color: white; */
+  border: 1px solid lightgray;
+}
+
+.hs-image-grid-container .grid-item {
+  flex: 0 0 auto;
+  width: 200px; /* Adjust as needed */
+  /* height: 100px; /* Adjust as needed */
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+
+.hs-image-grid-container .pinned-col {
+  position: sticky;
+  left: 0;
+  z-index: 2; /* Ensure it's above other content */
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.hs-image-grid-container .grid-item .pinned-row {
+  position: sticky;
+  top: 0;
+  z-index: 1; /* Ensures headers are above other content but under the first column */
+  background-color: white; /* Or your desired background */
+}
+
+.hs-image-grid-container .grid-item .item-header {
+  width: 100%; /* Full width of the grid item */
+  text-align: center; /* Center the text */
+  margin-bottom: 0px; /* Space between header and images */
+  /* Additional styling for the header */
+  height: 60px;
+  min-height: 60px;
+  padding-top: 10px;
+}
+
+.hs-image-grid-container .grid-item img {
+  max-width: 100%;
+  max-height: 100%;
+  margin: 5px auto; /* Center image horizontally, add margin */
+}
+.hs-image-grid-container .grid-item .in-training, .hs-legend .in-training {
+  border: solid 3px lightgray;
+  margin: 4.5px auto;
+}
+.hs-image-grid-container .grid-item .in-eval, .hs-legend .in-eval {
+  border: double 3px blue;
+  margin: 4.5px auto;
+}
+
+.hs-image-grid-container .grid-item .placeholder-img {
+  width: 100%;
+  min-width: 100px;
+  /* aspect-ratio: 640 / 512; */
+  aspect-ratio: 320 / 512;
+  margin: 5px auto; /* Center image horizontally, add margin */
+  /* Center text horizontally and vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid lightgray;
+  border-top: 1px solid lightgray;
+}
+
+.hs-image-grid-container .overlay-text {
+  position: absolute;
+  top: 0%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: red; /* Choose text color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none; /* Allows clicking on the image through the text */
+}
+
+.hs-legend {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding: 10px;
+  margin: 0 auto;
+  width: fit-content;
+}
+.hs-legend * {
+  margin: 0 10px;
+  padding: 2px 6px;
+}
+
+.is-collapsible > .is-full {
+  width: 100%;
+}
+/* 
+.is-collapsible > .is-four-fifths {
+  width: 80%;
+} */
+
+/* .collapsible-head {
+  background-color: lightblue;
+} */
+
+.is-collapsible {
+  padding-top: 20px;
+  /* margin-top: -20px; */
+}
+/* .is-collapsible.is-active {
+  margin-top: 0px;
+} */
+
+.table-header {
+  border-left: 1px solid lightgray;
+}
+.table-header .column {
+  border-right: 1px solid lightgray;
+}
+.space {
+  height: 10px;
+}
+
+.box .box {
+  background-color: #fafafa;
+  /* border-radius:15px; */
+  border: 1px solid #e0e0e0;
+}
